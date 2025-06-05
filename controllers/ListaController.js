@@ -29,15 +29,25 @@ function leiaDadosTarefa() {
  }
  //------------------------------------------------------------------------------------------------------
   function adicionarElementoFinal() {
-    const novaTarefa = leiaDadosTarefa();  
+    const novaTarefa = leiaDadosTarefa();
+    if(novaTarefa!=null){  
     minhaLista.addLast(novaTarefa);
     console.log(minhaLista.toString());
     limpaInputs();
     atualizarLista();
+    }
   }
   //--------------------------------------------------------------------------------------------
-  function adicionarIndice() {
-    //implemente
+  function adicionarIndice(){
+    const novaTarefa = leiaDadosTarefa();
+    const indice = document.getElementById("txtIndice").value.trim();
+    if(novaTarefa!=null){
+      minhaLista.addAtIndex(indice, novaTarefa);
+      console.log(minhaLista.toString());
+      limpaInputs();
+      atualizarLista();
+    }
+    
   }
 //--------------------------------------------------------------------------------------------
  // Função para remover o primeiro elemento da lista
