@@ -56,7 +56,7 @@ function leiaDadosTarefa() {
 
     let index = 0;
     for (const tarefa of minhaLista) {
-        const prioridadeAtual = parseInt(tarefa.prioridade);
+        const prioridadeAtual = tarefa.prioridade;
         if (novaPrioridade < prioridadeAtual) {
             break;
         }

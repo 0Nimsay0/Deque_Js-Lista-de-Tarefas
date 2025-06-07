@@ -82,8 +82,6 @@ class LinkedList{
         return atual.dado;
 }
 
-
-
     removeFirst(){
         const dadoRemovido = this.#head.dado;
         this.#head = this.#head.proximo;
