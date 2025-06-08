@@ -6,7 +6,7 @@ Este repositório foi feito para demonstrar o uso de estruturas de dados (lista 
 ---
 ## 🧩 Sobre o Projeto
 
-Criamos uma aplicação web simples onde é possível gerenciar tarefas do dia a dia usando uma estrutura de lista encadeada, controlando cada tarefa como um nó dessa lista.
+Uma aplicação web simples onde é possível gerenciar tarefas do dia a dia usando uma estrutura de lista encadeada, controlando cada tarefa como um nó dessa lista.
 
 ## 🌟 Funcionalidades existente no código
 
