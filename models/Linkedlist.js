@@ -58,7 +58,7 @@ class LinkedList{
         return true;
     } 
 
-    removeAtIndex(index) {
+     removeAtIndex(index) {
         if (index === 0) {
             return this.removeFirst();
         }
@@ -68,8 +68,10 @@ class LinkedList{
         }
 
         let atual = this.#head;
-        for (let i = 0; i < index; i++) {
+        let pos = 0;
+        while (pos < index) {
             atual = atual.proximo;
+            pos++;
         }
 
         const anterior = atual.anterior;
@@ -80,7 +82,8 @@ class LinkedList{
 
         this.#qtd--;
         return atual.dado;
-}
+} 
+
 
     removeFirst(){
         const dadoRemovido = this.#head.dado;

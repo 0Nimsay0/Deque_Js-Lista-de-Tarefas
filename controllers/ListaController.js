@@ -136,7 +136,7 @@ function removerTarefaPorIndice(index) {
     const tarefaRemovida = minhaLista.removeAtIndex(index);
     const agora = obterHoraAtual();
     const hoje = obterDataAtual();
-    const segundos = calcularDiferencaHoras(tarefaRemovida.hora, agora);
+    const segundos = calcularDiferencaHoras(agora, tarefaRemovida.hora);
     const dias = calcularDiferencaDias(tarefaRemovida.data, hoje);
 
     mostrarMensagemRemocao(tarefaRemovida, segundos, dias);
@@ -169,7 +169,8 @@ function mostrarMensagemRemocao(tarefaRealizada, hora, data) {
           novaLinha.addEventListener("click", ((i) => 
           { return () => { const confirmacao = confirm("Deseja remover a tarefa selecionada?");
           if (confirmacao) {
-            minhaLista.removeAtIndex(i);
+            removerTarefaPorIndice(i);
+            //minhaLista.removeAtIndex(i);
             atualizarLista();
           }
         };
