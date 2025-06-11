@@ -76,10 +76,8 @@ class LinkedList{
 
         const anterior = atual.anterior;
         const proximo = atual.proximo;
-
         anterior.proximo = proximo;
         proximo.anterior = anterior;
-
         this.#qtd--;
         return atual.dado;
 } 

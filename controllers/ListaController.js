@@ -167,10 +167,10 @@ function mostrarMensagemRemocao(tarefaRealizada, hora, data) {
           novaLinha.innerHTML = tarefa.toString();
           novaLinha.style.cursor = "pointer";
           novaLinha.addEventListener("click", ((i) => 
-          { return () => { const confirmacao = confirm("Deseja remover a tarefa selecionada?");
+          { 
+            return () => { const confirmacao = confirm("Deseja remover a tarefa selecionada?");
           if (confirmacao) {
             removerTarefaPorIndice(i);
-            //minhaLista.removeAtIndex(i);
             atualizarLista();
           }
         };
