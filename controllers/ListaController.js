@@ -143,7 +143,16 @@ function mostrarElementoInicio() {
 //------------------------------------------------------------------------------------------------
 function removerTarefaPorIndice(index) {
   if (!minhaLista.isEmpty()) {
-    const tarefaRemovida = minhaLista.removeAtIndex(index);
+    let tarefaRemovida = null;
+    if(index === 0){
+      tarefaRemovida  = minhaLista.removeFirst();
+    }
+    else if(index === minhaLista.length - 1){
+      tarefaRemovida = minhaLista.removeLast();
+    } 
+    else{
+      tarefaRemovida = minhaLista.removeAtIndex(index);
+    }
     const agora = obterHoraAtual();
     const hoje = obterDataAtual();
     const segundos = calcularDiferencaHoras(agora, tarefaRemovida.hora);

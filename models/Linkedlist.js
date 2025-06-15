@@ -53,14 +53,6 @@ class LinkedList{
     } 
 
      removeAtIndex(index) {
-        if (index === 0) {
-            return this.removeFirst();
-        }
-
-        if (index === this.#qtd - 1) {
-            return this.removeLast();
-        }
-
         let atual = this.#head;
         let pos = 0;
         while (pos < index) {
