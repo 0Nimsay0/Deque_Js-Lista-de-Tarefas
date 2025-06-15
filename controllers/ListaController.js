@@ -53,6 +53,15 @@ function leiaDadosTarefa() {
     const novaTarefa = leiaDadosTarefa();
     if (novaTarefa != null){
     const novaPrioridade = document.getElementById("txtnovaPrioridade").value.trim();
+      if(minhaLista.isEmpty() ){
+         minhaLista.addFirst(novaTarefa);
+      }
+     else if(novaPrioridade < minhaLista.getFirst().prioridade ){
+       minhaLista.addFirst(novaTarefa);
+    }
+    else if(novaPrioridade >= minhaLista.getLast().prioridade){
+       minhaLista.addLast(novaTarefa);
+    } else{ 
 
     let index = 0;
     for (const tarefa of minhaLista) {
@@ -62,7 +71,8 @@ function leiaDadosTarefa() {
         }
         index++;
     }
-    minhaLista.addAtIndex(index, novaTarefa);
+    minhaLista.addAtIndex(index, novaTarefa); 
+     }
     console.log(minhaLista.toString());
     limpaInputs();
     atualizarLista();

@@ -38,12 +38,6 @@ class LinkedList{
 
     addAtIndex(index, novoDado){
         const novoNo = new No(novoDado);
-        if (index === 0) 
-            return this.addFirst(novoDado);
-    
-        if (index === this.#qtd) 
-            return this.addLast(novoDado);
-    
         let aux = this.#head;
         let pos = 0;
         while(pos < index - 1){
